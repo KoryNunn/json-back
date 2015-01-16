@@ -1,0 +1,22 @@
+{
+  "name": "json-back",
+  "version": "1.0.0",
+  "description": "json-back for javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matt-larner/json-back.git"
+  },
+  "author": "Kory Nunn <knunn187@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/korynunn/json-back/issues"
+  },
+  "homepage": "https://github.com/matt-larner/json-back",
+  "devDependencies": {
+    "tape": "^3.0.3"
+  }
+}
