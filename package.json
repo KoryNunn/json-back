@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matt-larner/json-back.git"
+    "url": "https://github.com/korynunn/json-back.git"
   },
   "author": "Kory Nunn <knunn187@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/korynunn/json-back/issues"
   },
-  "homepage": "https://github.com/matt-larner/json-back",
+  "homepage": "https://github.com/korynunn/json-back",
   "devDependencies": {
     "tape": "^3.0.3"
   }
