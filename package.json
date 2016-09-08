@@ -1,6 +1,6 @@
 {
   "name": "json-back",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "json-back for javascript",
   "main": "index.js",
   "scripts": {
