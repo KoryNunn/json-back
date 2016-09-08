@@ -18,16 +18,28 @@ JsonBack.stringify({a:1, b:2}, function(error, result){
 
 ### Errors
 
+Parsing:
 ```javascript
 var JsonBack = require('json-back');
 
 JsonBack.parse('{"a" 1, "b": 2}', function(error, result){
-    // errror instanceof SyntaxError
+    // error instanceof SyntaxError
 });
 
 ```
 
-JsonBack.stringify can't really error..
+Stringifying:
+```javascript
+var JsonBack = require('json-back');
+
+var object = {};
+object.cyclic = object;
+
+JsonBack.stringify(object, function(error, result){
+    error; -> 'Converting circular structure to JSON'
+});
+
+```
 
 ## Also..
 

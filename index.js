@@ -4,11 +4,15 @@ module.exports.parse = function (json, reviver, callback){
         reviver = null;
     }
 
+    var result;
+
     try {
-        return callback(null, JSON.parse(json, reviver));
+        result = JSON.parse(json, reviver);
     } catch(error){
         return callback(error);
     }
+
+    callback(null, result);
 };
 module.exports.stringify = function (value, replacer, spacer, callback){
     if(arguments.length === 3){
@@ -26,5 +30,13 @@ module.exports.stringify = function (value, replacer, spacer, callback){
         replacer = spacer = null;
     }
 
-    callback(null, JSON.stringify(value, replacer, spacer));
+    var result;
+
+    try{
+        result = JSON.stringify(value, replacer, spacer);
+    } catch(error){
+        return callback(error);
+    }
+
+    callback(null, result);
 };

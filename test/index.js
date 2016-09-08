@@ -71,17 +71,28 @@ test('reviver', function(t) {
     });
 });
 
-test('error', function(t) {
+test('parse error', function(t) {
     t.plan(2);
 
     var input = '[1, 2, 3,]';
 
     JsonBack.parse(input, function(error, result){
-        t.equal(error.message, 'Unexpected token ]');
+        t.ok(~error.message.indexOf('Unexpected token ]'));
         t.equal(result, undefined);
     });
 });
 
+test('stringify error', function(t) {
+    t.plan(2);
+
+    var input = {};
+    input.a = input;
+
+    JsonBack.stringify(input, function(error, result){
+        t.equal(error.message, 'Converting circular structure to JSON');
+        t.equal(result, undefined);
+    });
+});
 
 test('stringify', function(t) {
     t.plan(1);
